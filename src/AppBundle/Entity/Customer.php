@@ -45,7 +45,7 @@ class Customer
     /**
      * @var string
      *
-     * @ORM\Column(name="business", type="string", length=255)
+     * @ORM\Column(name="business", type="string", length=255, nullable=true)
      */
     private $business;
 
@@ -68,22 +68,6 @@ class Customer
     }
 
     /**
-     * Set name
-     *
-     * @param string $name
-     *
-     * @return Customer
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-
-        return $this;
-    }
-
-    /**
-     * Get name
-     *
      * @return string
      */
     public function getName()
@@ -92,22 +76,14 @@ class Customer
     }
 
     /**
-     * Set lastName
-     *
-     * @param string $lastName
-     *
-     * @return Customer
+     * @param string $name
      */
-    public function setLastName($lastName)
+    public function setName($name)
     {
-        $this->lastName = $lastName;
-
-        return $this;
+        $this->name = $name;
     }
 
     /**
-     * Get lastName
-     *
      * @return string
      */
     public function getLastName()
@@ -116,22 +92,14 @@ class Customer
     }
 
     /**
-     * Set nIF
-     *
-     * @param string $nIF
-     *
-     * @return Customer
+     * @param string $lastName
      */
-    public function setNIF($nIF)
+    public function setLastName($lastName)
     {
-        $this->nIF = $nIF;
-
-        return $this;
+        $this->lastName = $lastName;
     }
 
     /**
-     * Get nIF
-     *
      * @return string
      */
     public function getNIF()
@@ -140,22 +108,14 @@ class Customer
     }
 
     /**
-     * Set business
-     *
-     * @param string $business
-     *
-     * @return Customer
+     * @param string $nIF
      */
-    public function setBusiness($business)
+    public function setNIF($nIF)
     {
-        $this->business = $business;
-
-        return $this;
+        $this->nIF = $nIF;
     }
 
     /**
-     * Get business
-     *
      * @return string
      */
     public function getBusiness()
@@ -164,27 +124,26 @@ class Customer
     }
 
     /**
-     * Set nationality
-     *
-     * @param string $nationality
-     *
-     * @return Customer
+     * @param string $business
      */
-    public function setNationality($nationality)
+    public function setBusiness($business)
     {
-        $this->nationality = $nationality;
-
-        return $this;
+        $this->business = $business;
     }
 
     /**
-     * Get nationality
-     *
      * @return string
      */
     public function getNationality()
     {
         return $this->nationality;
     }
-}
 
+    /**
+     * @param string $nationality
+     */
+    public function setNationality($nationality)
+    {
+        $this->nationality = $nationality;
+    }
+}

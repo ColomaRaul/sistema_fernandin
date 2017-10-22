@@ -1,5 +1,9 @@
-{% for customer in customers %}
-    <br>
-    {{ customer.name }} - {{ customer.lastName }} => {{ customer.nationality }}
-    <br>
-{% endfor %}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for customer in customers %}
+        <br>
+        {{ customer.name }} - {{ customer.lastName }} => {{ customer.nationality }}
+        <br>
+    {% endfor %}
+{% endblock %}
